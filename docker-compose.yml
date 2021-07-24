@@ -1,0 +1,28 @@
+services:
+  postgresql:
+    image: postgres
+    container_name: postgres-container
+    restart: always
+    volumes:
+      - appvolume:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    env_file:
+      - ./postgres.env
+    networks:
+      - app-network
+
+  tomcat:
+    image: tomcat
+    container_name: tomcat-container
+    restart: always
+    volumes:
+      - ./target/rss-web-reader.war:/usr/local/tomcat/webapps/rss-web-reader.war
+    ports:
+      - "8080:8080"
+
+volumes:
+  appvolume: {}
+
+networks:
+  app-network:
