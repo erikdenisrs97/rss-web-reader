@@ -4,11 +4,13 @@ services:
     container_name: postgres-container
     restart: always
     volumes:
-      - appvolume:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - 5432:5432
-    env_file:
-      - ./postgres.env
+    environment:
+      - POSTGRES_PASSWORD=passwd
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=mydb
     networks:
       - app-network
 
