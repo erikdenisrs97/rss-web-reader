@@ -22,6 +22,8 @@ services:
       - ./target/rss-web-reader.war:/usr/local/tomcat/webapps/rss-web-reader.war
     ports:
       - "8080:8080"
+    networks:
+      - app-network
 
 volumes:
   appvolume: {}
