@@ -2,8 +2,8 @@ package tests;
 
 import java.util.List;
 
-import model.RSS;
-import model.dao.RSSdao;
+import models.RSS;
+import models.dao.RSSdao;
 
 public class GetFeedsTest {
   public static void main(String[] args) {

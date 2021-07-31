@@ -2,12 +2,12 @@ package models;
 
 public class FeedMessage {
   
-  private String guid;
+  private String link;
   private String title;
   private String description;
 
-  public String getGuid() {
-    return this.guid;
+  public String getLink() {
+    return this.link;
   }
 
   public String getTitle() {
@@ -18,8 +18,8 @@ public class FeedMessage {
     return this.description;
   }
 
-  public void setGuid(String guid) {
-    this.guid = guid;
+  public void setLink(String link) {
+    this.link = link;
   }
 
   public void setTitle(String title) {

@@ -9,7 +9,7 @@ import java.io.*;
 public class RSSReader extends DefaultHandler {
 
   private static final String ITEM = "item";
-  private static final String GUID = "guid";
+  private static final String LINK = "link";
   private static final String TITLE = "title";
   private static final String DESCRIPTION = "description";
 
@@ -56,7 +56,7 @@ public class RSSReader extends DefaultHandler {
       if(currentTag.equalsIgnoreCase(TITLE)) {
         System.out.println(new String(ch, start, lenght));
       }
-      if(currentTag.equalsIgnoreCase(GUID)) {
+      if(currentTag.equalsIgnoreCase(LINK)) {
         System.out.println(new String(ch, start, lenght));
       }
       if(currentTag.equalsIgnoreCase(DESCRIPTION)) {

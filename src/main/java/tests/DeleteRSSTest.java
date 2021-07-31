@@ -1,7 +1,7 @@
 package tests;
 
-import model.RSS;
-import model.dao.RSSdao;
+import models.RSS;
+import models.dao.RSSdao;
 
 public class DeleteRSSTest {
   public static void main(String[] args) {
