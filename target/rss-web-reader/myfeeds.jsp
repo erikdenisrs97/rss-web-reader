@@ -1,4 +1,4 @@
-<%@ page import = "java.util.*, models.dao.*, models.* "%>
+<%@ page import = "java.util.*, models.dao.*, models.RSS" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,28 +10,21 @@
     <title>Feed</title>
   </head>
   <body>
-    <h1>Showing all feeds</h1>
+    <h1>Showing all registered feeds</h1>
     <div class="table-responsive">
       <table class="table table-bordered table-sm">
         <tr>
-          <th>TITLE</th>
-          <th>DESCRIPTION</th>
-          <th>LINK</th>
+          <th>ID</th>
+          <th>RSS</th>
         </tr>
         <%
-          RSSReader rssr = new RSSReader();
           RSSdao dao = new RSSdao();
           List<RSS> feeds = dao.getFeeds();
           for(RSS feed : feeds) {
-            rssr.read(feed.getLink());
-          }
-          List<FeedMessage> messages = rssr.getFeedMessages();
-          for(FeedMessage message : messages) {
         %>
           <tr>
-            <td><%= message.getTitle() %></td>
-            <td><%= message.getDescription() %></td>
-            <td><%= message.getLink() %></td>
+            <td><%= feed.getId() %></td>
+            <td><%= feed.getLink() %></td>
           </tr>
         <%
           }

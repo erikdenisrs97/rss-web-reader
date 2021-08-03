@@ -10,7 +10,6 @@ public class FindByIdTest {
     RSS rss = dao.findById(1);
 
     System.out.println(rss.getLink());
-    System.out.println("FindByIdTest passed!!");
 
   }
   

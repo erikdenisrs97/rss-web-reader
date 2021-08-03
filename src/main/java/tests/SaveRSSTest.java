@@ -9,10 +9,9 @@ public class SaveRSSTest {
       RSS testRSS = new RSS();
       RSSdao testDAO = new RSSdao();
 
-      testRSS.setLink("https://rss.tecmundo.com.br/feed");
+      testRSS.setLink("https://rss.tecmundo.com.br/feeds");
       testDAO.save(testRSS);
-
-      System.out.println("SaveRSSTest passed!!");
+      
   }
 
 }

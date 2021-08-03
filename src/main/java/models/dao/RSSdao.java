@@ -77,6 +77,7 @@ public class RSSdao {
 
       while(rs.next()) {
         RSS rss = new RSS();
+        rss.setId(rs.getInt("feed_id"));
         rss.setLink(rs.getString("link"));
         feeds.add(rss);
       }

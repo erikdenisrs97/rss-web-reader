@@ -15,8 +15,5 @@ public class GetFeedsTest {
     for(RSS rss : feeds) {
       System.out.println("Link: " + rss.getLink());
     }
-
-    System.out.println("GetFeedsTest passed!!");
-
   }
 }

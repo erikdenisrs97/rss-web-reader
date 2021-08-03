@@ -42,8 +42,8 @@ public class RSSServlet extends HttpServlet {
 
       out.println("<html>");
       out.println("<body>");
-      out.println("Contato " + newRSS.getLink() +
-              " adicionado com sucesso!");
+      out.println("Feed " + newRSS.getLink() +
+              " registered!");
       out.println("</body>");
       out.println("</html>");
   }

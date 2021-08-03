@@ -1,6 +1,6 @@
 services:
   postgresql:
-    image: postgres
+    image: postgres:13.3
     container_name: postgres-container
     restart: always
     volumes:
@@ -15,7 +15,7 @@ services:
       - app-network
 
   tomcat:
-    image: tomcat
+    image: tomcat:9.0.50
     container_name: tomcat-container
     restart: always
     volumes:
